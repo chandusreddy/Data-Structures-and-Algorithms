@@ -1,4 +1,4 @@
-package com.chandu.datastructures;
+package com.chandu.datastructures.others;
 
 public class ArrayPairsthatSumuptoaValue {
 	
