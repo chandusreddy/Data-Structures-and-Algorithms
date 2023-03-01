@@ -10,10 +10,10 @@ public class RemoveEvenElementsFromArray {
 		int oddElements = 0;
 		// Find number of odd elements in arr
 		for (int i = 0; i < arr.length; i++) {
+			System.out.println("Given Array Elements: " + arr[i] + " ");
 			if (arr[i] % 2 != 0)
 				oddElements++;
 		}
-
 		// Create result array with the size equal to the number of odd elements in arr
 		int[] result = new int[oddElements];
 		int result_index = 0;
@@ -30,6 +30,8 @@ public class RemoveEvenElementsFromArray {
 	public static void main(String[] args) {
 		int[] arr1 = { 1, 2, 4, 5, 10, 6, 3 };
 		int[] result = removeEven(arr1);
+		System.out.println();
+		System.out.println("Printing the elements of an Array after Removing Even elements: ");
 		for (int i = 0; i < result.length; i++) {
 			System.out.println(result[i]);
 		}
