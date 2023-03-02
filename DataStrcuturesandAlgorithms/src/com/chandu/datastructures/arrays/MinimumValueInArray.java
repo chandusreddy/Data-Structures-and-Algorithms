@@ -1,5 +1,5 @@
 package com.chandu.datastructures.arrays;
-/*
+/*@author @Chandu
  * In this problem, you have to implement the int findMinimum(int[] arr) method, 
  * which will traverse the whole array and find the smallest number in the array.
  * */
@@ -31,7 +31,7 @@ public class MinimumValueInArray {
 	    System.out.println();
 
 	    int min = findMinimum(arr);
-	    System.out.println("Minimum in the Array: " + min);
+	    System.out.println("Minimum Value in the Array is : " + min);
 
 	  }
 

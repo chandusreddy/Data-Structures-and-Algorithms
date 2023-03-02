@@ -1,6 +1,7 @@
 package com.chandu.datastructures.arrays;
 
 /**
+ * @author @Chandu
  * Solution for finding the missing number in the given Array
  * 
  * Find the sum of n number using formula n=n*(n+1)/2 Find the sum of elements

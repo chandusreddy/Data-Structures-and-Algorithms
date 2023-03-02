@@ -1,5 +1,6 @@
 package com.chandu.datastructures.arrays;
 /*Problem Statement #
+ * @author @Chandu
 In this problem, you have to implement the int[] findProduct(int[] arr) method which will modify arr in such a way that in the output, 
 each index i will contain the product of all elements present in arr except the element stored on that index i.*/
 public class ProductArray {

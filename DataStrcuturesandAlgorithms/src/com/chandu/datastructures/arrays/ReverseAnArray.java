@@ -1,4 +1,6 @@
 package com.chandu.datastructures.arrays;
+/***
+ * @author @Chandu***/
 
 public class ReverseAnArray {
 	

@@ -1,6 +1,7 @@
 package com.chandu.datastructures.arrays;
 /*
  * Problem Statement
+ * @author @Chandu
 In this problem, given two sorted arrays, you have to implement the int[] mergeArrays(int[] arr1, int[] arr2) method, 
 which returns an array consisting of all elements of both arrays in a sorted way.*/
 public class MergeTwoArraysIntoOne {

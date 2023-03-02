@@ -1,5 +1,7 @@
 package com.chandu.datastructures.arrays;
-
+/***@author @Chandu
+ * 
+ * **/
 public class ArrayUtils {
 	
 	public void printArray(int[] arr) {

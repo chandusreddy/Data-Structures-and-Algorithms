@@ -1,5 +1,7 @@
 package com.chandu.datastructures.arrays;
-
+/***
+ * @author @Chandu
+ * ***/
 public class SortedCheckSumArray {
 
 	// Helper Function to sort given Array (Quick Sort)

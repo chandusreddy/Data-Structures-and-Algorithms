@@ -1,5 +1,6 @@
 package com.chandu.datastructures.arrays;
 /*
+ * @author @Chandu
  * Problem Statement*****
 In this problem, you have to implement the int[] findSum(int[] arr, int n) method, which will take a number n, and an array arr as input and returns an array of two integers that add up to n in an array. 
 You are required to return only one such pair. If no such pair found then simply return the array.*/
