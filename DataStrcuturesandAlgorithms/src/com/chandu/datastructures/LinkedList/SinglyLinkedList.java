@@ -5,6 +5,13 @@ package com.chandu.datastructures.LinkedList;
  * @author @Chandu Implementing the SinglyLinked List and the internal details
  *         of the Linked List with the ListNode - Containing the Node -> Data is
  *         the actual value and the next which refers to the next Node.
+ *         Following are the different method and the implementation details
+ *         #ListNode - Node that contains data and the next in a SinglyLinkedList
+ *         #Display() - Method for printing the List of values in a SinglyLinkedList
+ *         #findSLLLength() - Method for finding the length  of a SinglyLinkedList
+ *         #insertFirst() - Method for Inserting the node at the Beginning of a SinglyLinkedList
+ *         #insertLast() - Method for Inserting the node at the end of a SinglyLinkedList
+ *         
  */
 public class SinglyLinkedList {
 
@@ -55,6 +62,21 @@ public class SinglyLinkedList {
 		head = newNode;
 	}
 
+	// Method for inserting the node at the End of the Singly Linked List
+	public void insertLast(int value) {
+		ListNode newNode = new ListNode(value);
+		if (head == null) {
+			head = newNode;
+			return;
+		}
+		ListNode current = head;
+		while (null != current.next) {
+			current = current.next;
+		}
+		current.next = newNode;
+
+	}
+
 	public static void main(String[] args) {
 		SinglyLinkedList sList = new SinglyLinkedList();
 		sList.head = new ListNode(10);
@@ -78,6 +100,9 @@ public class SinglyLinkedList {
 		System.out.println("After Inserting at the Beginning of the Linked List: ");
 		System.out.println();
 		sList.Display();
-
+		System.out.println();
+		System.out.println("Inserting the node at the End of the Linked List: ");
+		sList.insertLast(66);
+		sList.Display();
 	}
 }
