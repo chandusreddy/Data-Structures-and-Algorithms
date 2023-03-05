@@ -6,12 +6,15 @@ package com.chandu.datastructures.LinkedList;
  *         of the Linked List with the ListNode - Containing the Node -> Data is
  *         the actual value and the next which refers to the next Node.
  *         Following are the different method and the implementation details
- *         #ListNode - Node that contains data and the next in a SinglyLinkedList
- *         #Display() - Method for printing the List of values in a SinglyLinkedList
- *         #findSLLLength() - Method for finding the length  of a SinglyLinkedList
- *         #insertFirst() - Method for Inserting the node at the Beginning of a SinglyLinkedList
- *         #insertLast() - Method for Inserting the node at the end of a SinglyLinkedList
- *         
+ *         #ListNode - Node that contains data and the next in a
+ *         SinglyLinkedList #Display() - Method for printing the List of values
+ *         in a SinglyLinkedList #findSLLLength() - Method for finding the
+ *         length of a SinglyLinkedList #insertFirst() - Method for Inserting
+ *         the node at the Beginning of a SinglyLinkedList #insertLast() -
+ *         Method for Inserting the node at the end of a SinglyLinkedList
+ *         #insertatgivenPosition() - Method to insert node at a given valid
+ *         Position
+ * 
  */
 public class SinglyLinkedList {
 
@@ -77,6 +80,28 @@ public class SinglyLinkedList {
 
 	}
 
+	// Method for inserting the node at a given position
+	public void insertatgivenPosition(int position, int value) {
+		ListNode node = new ListNode(value);
+		if (position == 1) {
+			node.next = head;
+			head = node;
+		} else {
+
+			ListNode previous = head;
+			int count = 1;
+			while (count < position - 1) {
+				previous = previous.next;
+				count++;
+			}
+			ListNode current = previous.next;
+			previous.next = node;
+			node.next = current;
+
+		}
+
+	}
+
 	public static void main(String[] args) {
 		SinglyLinkedList sList = new SinglyLinkedList();
 		sList.head = new ListNode(10);
@@ -103,6 +128,10 @@ public class SinglyLinkedList {
 		System.out.println();
 		System.out.println("Inserting the node at the End of the Linked List: ");
 		sList.insertLast(66);
+		sList.Display();
+		System.out.println();
+		System.out.println("Inserting the node at the End of the Linked List: ");
+		sList.insertatgivenPosition(4,999);
 		sList.Display();
 	}
 }
