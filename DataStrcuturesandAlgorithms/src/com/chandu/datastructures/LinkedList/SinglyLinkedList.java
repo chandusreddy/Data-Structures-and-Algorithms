@@ -14,6 +14,10 @@ package com.chandu.datastructures.LinkedList;
  *         Method for Inserting the node at the end of a SinglyLinkedList
  *         #insertatgivenPosition() - Method to insert node at a given valid
  *         Position
+ *         #DeleteFirst() - Method for deleting the node at the first in the Singly Linked List.
+ *         #DeleteLast() - Method for deleting the node at the last in the Singly Linked List.     
+ *   
+ *         
  * 
  */
 public class SinglyLinkedList {
@@ -101,6 +105,32 @@ public class SinglyLinkedList {
 		}
 
 	}
+	
+	// Method for deleting a node at the first of the SinglyLinkedList
+	public ListNode DeleteFirst() {
+		if(head==null) {
+			return null;
+		}
+		ListNode temp = head;
+		head = head.next;
+		temp.next = null;
+		return temp;
+	}
+	// Method for deleting at the End of the SinglyLinkedList
+	public ListNode DeleteLast() {
+		if(head==null || head.next == null) {
+			return head;
+		}
+		ListNode current = head;
+		ListNode previous = null;
+		while(current.next!=null) {
+			previous = current;
+			current = current.next;
+		}
+		previous.next = null;
+		return current;
+		
+	}
 
 	public static void main(String[] args) {
 		SinglyLinkedList sList = new SinglyLinkedList();
@@ -121,9 +151,6 @@ public class SinglyLinkedList {
 		System.out.println();
 		System.out.println("Inserting the node at the Beginning of the Linked List: ");
 		sList.insertFirst(44);
-		System.out.println();
-		System.out.println("After Inserting at the Beginning of the Linked List: ");
-		System.out.println();
 		sList.Display();
 		System.out.println();
 		System.out.println("Inserting the node at the End of the Linked List: ");
@@ -133,5 +160,15 @@ public class SinglyLinkedList {
 		System.out.println("Inserting the node at the End of the Linked List: ");
 		sList.insertatgivenPosition(4,999);
 		sList.Display();
+		System.out.println();
+		System.out.println("Deleting the node at the First of the Singly Linked List: ");
+		sList.DeleteFirst();
+		sList.Display();
+		System.out.println();
+		System.out.println("Deleting the node at the Last of the Singly Linked List: ");
+		sList.DeleteLast();
+		sList.Display();
+		
+		
 	}
 }
