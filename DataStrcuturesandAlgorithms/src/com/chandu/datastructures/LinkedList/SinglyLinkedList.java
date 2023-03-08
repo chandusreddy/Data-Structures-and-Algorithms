@@ -6,14 +6,12 @@ package com.chandu.datastructures.LinkedList;
  *         of the Linked List with the ListNode - Containing the Node -> Data is
  *         the actual value and the next which refers to the next Node.
  *         Following are the different method and the implementation details
- *         #ListNode - Node that contains data and the next in a
- *         SinglyLinkedList #Display() - Method for printing the List of values
- *         in a SinglyLinkedList #findSLLLength() - Method for finding the
- *         length of a SinglyLinkedList #insertFirst() - Method for Inserting
- *         the node at the Beginning of a SinglyLinkedList #insertLast() -
- *         Method for Inserting the node at the end of a SinglyLinkedList
- *         #insertatgivenPosition() - Method to insert node at a given valid
- *         Position
+ *         #ListNode - Node that contains data and the next in a SinglyLinkedList 
+ *         #Display() - Method for printing the List of values in a SinglyLinkedList 
+ *         #findSLLLength() - Method for finding the length of a SinglyLinkedList 
+ *         #insertFirst() - Method for Inserting the node at the Beginning of a SinglyLinkedList 
+ *         #insertLast() - Method for Inserting the node at the end of a SinglyLinkedList
+ *         #insertatgivenPosition() - Method to insert node at a given valid Position
  *         #DeleteFirst() - Method for deleting the node at the first in the Singly Linked List.
  *         #DeleteLast() - Method for deleting the node at the last in the Singly Linked List.     
  *   
@@ -168,6 +166,8 @@ public class SinglyLinkedList {
 		System.out.println("Deleting the node at the Last of the Singly Linked List: ");
 		sList.DeleteLast();
 		sList.Display();
+		System.out.println();
+		
 		
 		
 	}
