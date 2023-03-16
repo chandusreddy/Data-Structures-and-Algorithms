@@ -200,6 +200,7 @@ public class SinglyLinkedList {
 		sList.DeleteFirst();
 		sList.Display();
 		System.out.println();
+		System.out.println();
 		System.out.println("Deleting the node at the Last of the Singly Linked List: ");
 		sList.DeleteLast();
 		sList.Display();
