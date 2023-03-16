@@ -16,7 +16,10 @@ package com.chandu.datastructures.LinkedList;
  *         #insertatgivenPosition() - Method to insert node at a given valid
  *         Position. #DeleteFirst() - Method for deleting the node at the first
  *         in the Singly Linked List. #DeleteLast() - Method for deleting the
- *         node at the last in the Singly Linked List.
+ *         node at the last in the Singly Linked List. #delete(int position) -
+ *         Method for deleting the node at a given Position in the Singly Linked
+ *         List #SearchData(int data) - Method for searching an element in the
+ *         given Singkly Linked List
  * 
  * 
  * 
@@ -107,6 +110,18 @@ public class SinglyLinkedList {
 
 	}
 
+	public boolean isdataElement(int datakey) {
+		ListNode current = head;
+		while (current != null) {
+			if (current.data == datakey) {
+				return true;
+			}
+			current = current.next;
+
+		}
+		return false;
+	}
+
 	// Method for deleting a node at the first of the SinglyLinkedList
 	public ListNode DeleteFirst() {
 		if (head == null) {
@@ -146,8 +161,7 @@ public class SinglyLinkedList {
 				count++;
 			}
 			ListNode current = previous.next;
-			previous.next=current.next;
-			
+			previous.next = current.next;
 
 		}
 
@@ -192,6 +206,10 @@ public class SinglyLinkedList {
 		System.out.println();
 		System.out.println("Deleting the node at the given position 3 of the Singly Linked List: ");
 		sList.delete(3);
+		sList.Display();
+		System.out.println();
+		boolean status = sList.isdataElement(9);
+		System.out.println("Searching if the given element is in the Singly Linked List and the Status is : " + status);
 		sList.Display();
 
 	}
