@@ -5,17 +5,20 @@ package com.chandu.datastructures.LinkedList;
  * @author @Chandu Implementing the SinglyLinked List and the internal details
  *         of the Linked List with the ListNode - Containing the Node -> Data is
  *         the actual value and the next which refers to the next Node.
- *         Following are the different method and the implementation details
- *         #ListNode - Node that contains data and the next in a SinglyLinkedList 
- *         #Display() - Method for printing the List of values in a SinglyLinkedList 
- *         #findSLLLength() - Method for finding the length of a SinglyLinkedList 
- *         #insertFirst() - Method for Inserting the node at the Beginning of a SinglyLinkedList 
- *         #insertLast() - Method for Inserting the node at the end of a SinglyLinkedList
- *         #insertatgivenPosition() - Method to insert node at a given valid Position
- *         #DeleteFirst() - Method for deleting the node at the first in the Singly Linked List.
- *         #DeleteLast() - Method for deleting the node at the last in the Singly Linked List.     
- *   
- *         
+ * 
+ *         Following are the different method and the implementation details.
+ *         #ListNode - Node that contains data and the next in a
+ *         SinglyLinkedList. #Display() - Method for printing the List of values
+ *         in a SinglyLinkedList. #findSLLLength() - Method for finding the
+ *         length of a SinglyLinkedList. #insertFirst() - Method for Inserting
+ *         the node at the Beginning of a SinglyLinkedList #insertLast() -
+ *         Method for Inserting the node at the end of a SinglyLinkedList
+ *         #insertatgivenPosition() - Method to insert node at a given valid
+ *         Position. #DeleteFirst() - Method for deleting the node at the first
+ *         in the Singly Linked List. #DeleteLast() - Method for deleting the
+ *         node at the last in the Singly Linked List.
+ * 
+ * 
  * 
  */
 public class SinglyLinkedList {
@@ -103,10 +106,10 @@ public class SinglyLinkedList {
 		}
 
 	}
-	
+
 	// Method for deleting a node at the first of the SinglyLinkedList
 	public ListNode DeleteFirst() {
-		if(head==null) {
+		if (head == null) {
 			return null;
 		}
 		ListNode temp = head;
@@ -114,20 +117,40 @@ public class SinglyLinkedList {
 		temp.next = null;
 		return temp;
 	}
+
 	// Method for deleting at the End of the SinglyLinkedList
 	public ListNode DeleteLast() {
-		if(head==null || head.next == null) {
+		if (head == null || head.next == null) {
 			return head;
 		}
 		ListNode current = head;
 		ListNode previous = null;
-		while(current.next!=null) {
+		while (current.next != null) {
 			previous = current;
 			current = current.next;
 		}
 		previous.next = null;
 		return current;
-		
+
+	}
+
+	// Method for deleting at the given Position
+	public void delete(int position) {
+		if (position == 1) {
+			head = head.next;
+		} else {
+			ListNode previous = head;
+			int count = 1;
+			while (count < position - 1) {
+				previous = previous.next;
+				count++;
+			}
+			ListNode current = previous.next;
+			previous.next=current.next;
+			
+
+		}
+
 	}
 
 	public static void main(String[] args) {
@@ -156,7 +179,7 @@ public class SinglyLinkedList {
 		sList.Display();
 		System.out.println();
 		System.out.println("Inserting the node at the End of the Linked List: ");
-		sList.insertatgivenPosition(4,999);
+		sList.insertatgivenPosition(4, 999);
 		sList.Display();
 		System.out.println();
 		System.out.println("Deleting the node at the First of the Singly Linked List: ");
@@ -167,8 +190,9 @@ public class SinglyLinkedList {
 		sList.DeleteLast();
 		sList.Display();
 		System.out.println();
-		
-		
-		
+		System.out.println("Deleting the node at the given position 3 of the Singly Linked List: ");
+		sList.delete(3);
+		sList.Display();
+
 	}
 }
