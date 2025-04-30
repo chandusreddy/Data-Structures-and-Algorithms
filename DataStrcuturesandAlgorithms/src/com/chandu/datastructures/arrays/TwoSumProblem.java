@@ -4,17 +4,17 @@ package com.chandu.datastructures.arrays;
  * 
  * Solution_1 - using the for loops 
  * *************************************************
- * // O(n^2) Time Complexity | O(1) Space Complexity**
+ * O(n^2) Time Complexity | O(1) Space Complexity**
  * *************************************************
  * Complexity Solution_2 - using the Hashing function to store the matching
  * value during the sum 
  * *************************************************
- * // O(n) Time Complexity | O(1) Space Complexity**
+ * O(n) Time Complexity | O(1) Space Complexity**
  * *************************************************
  * Solution_3 - Using the Arrays.sort function and then adding the values from
  * left and right until the match is found 
  * *************************************************
- * // O(nlog(n)) Time Complexity | O(1) Space Complexity**
+ * O(nlog(n)) Time Complexity | O(1) Space Complexity**
  * *************************************************
  * 
  * 
