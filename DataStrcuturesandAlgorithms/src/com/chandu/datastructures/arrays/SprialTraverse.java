@@ -28,14 +28,14 @@ public class SprialTraverse {
 			endCol--;
 			// Traverse left
 			if (startRow <= endRow) {
-				for (int col = endCol; col <= startCol; col--) {
+				for (int col = endCol; col >= startCol; col--) {
 					resultarray.add(array[endRow][col]);
 				}
 			}
 			endRow--;
 			// Traverse top
 			if (startCol <= endCol) {
-				for (int row = endRow; row <= startRow; row--) {
+				for (int row = endRow; row >= startRow; row--) {
 					resultarray.add(array[row][startCol]);
 				}
 			}
